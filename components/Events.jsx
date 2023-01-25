@@ -12,9 +12,9 @@ const Events = () => {
     });
   }, []);
 
-  useEffect(() => {
-    setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
-  }, []);
+  // useEffect(() => {
+  //   setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
+  // }, []);
   const images = [
     "/fif2022.jpg",
     "/fif2022.jpg",
@@ -31,7 +31,9 @@ const Events = () => {
     "https://via.placeholder.com/290?text=10",
   ];
   return (
-    <div className="h-[700px] bg-[rgb(245,245,245)] pt-28  mx-auto">
+    <div className="h-[700px]  bg-[rgb(77,79,83)]   mx-auto">
+      <hr className="bg-[#de0083] pt-2" />
+      <div className="pt-28"></div>
       <div className="w-11/12 mx-auto">
         <div className="font-bold text-5xl text-[#de0083] underline underline-offset-4 text-center pb-2 flex justify-center">
           <h1
@@ -44,11 +46,27 @@ const Events = () => {
             Events
           </h1>
         </div>
-        <h2 className="text-xl text-slate-600 font-thin text-center pt-3">
+        <h2 className="text-xl text-white font-thin text-center pt-3">
           Discover Our Events
         </h2>
-
-        <motion.div
+        <div className="flex w-4/5 mx-auto overflow-x-scroll space-x-5 events-scroll pb-5">
+          {images.map((image) => {
+            return (
+              <div className="item basis-1/3" key={image}>
+                <img src={image} alt="img" className="object-cover relative" />
+                <Link href="https://innovation.brac.net/fif2022/">
+                  <div className="absolute text-inside bottom-10 text-center w-full z-20 text-white ">
+                    <h1 className="font-bold text-xl hover:underline hover:underline-offset-4">
+                      Frugal Innovation Forum 2022
+                    </h1>
+                    <p>11 October - 13 October</p>
+                  </div>
+                </Link>
+              </div>
+            );
+          })}
+        </div>
+        {/* <motion.div
           ref={carousel}
           className="carousel overflow-x-hidden relative"
           whileTap={{ cursor: "grabbing" }}
@@ -78,8 +96,10 @@ const Events = () => {
               );
             })}
           </motion.div>
-        </motion.div>
+        </motion.div> */}
       </div>
+      <div className="pt-[5.5rem]"></div>
+      <hr className="bg-[#de0083] pt-5 border-none" />
     </div>
   );
 };

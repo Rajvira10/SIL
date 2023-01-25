@@ -8,7 +8,18 @@ import { FaLinkedin } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer className="bg-[#212121] h-[350px] text-white">
-      <div className="flex w-7/12 mx-auto pt-20 justify-between items-center">
+      <hr className="bg-[#de0083] pt-3" />
+      <h1 className="text-3xl pb-3 text-center pt-16">Contact Us</h1>
+      <div className="flex w-7/12 mx-auto pt-6 justify-between items-center">
+        <div className="flex flex-col flex-wrap max-w-fit">
+          <p className="pb-1">
+            Bangladesh/Headquarters: <br />
+            BRAC Centre <br />
+            75 Mohakhali,
+            <br /> Dhaka-1212 Bangladesh
+          </p>
+          <p>Tel: 88 02 2222 81265. E-mail: info@brac.net</p>
+        </div>
         <div className="flex flex-col items-center">
           <Link href="/">
             {" "}
@@ -55,16 +66,6 @@ const Footer = () => {
               </div>
             </Link>
           </div>
-        </div>
-        <div className="flex flex-col flex-wrap max-w-fit">
-          <h1 className="text-3xl pb-3">Contact Us</h1>
-          <p className="pb-1">
-            Bangladesh/Headquarters: <br />
-            BRAC Centre <br />
-            75 Mohakhali,
-            <br /> Dhaka-1212 Bangladesh
-          </p>
-          <p>Tel: 88 02 2222 81265. E-mail: info@brac.net</p>
         </div>
       </div>
     </footer>
