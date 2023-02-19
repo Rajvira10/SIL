@@ -7,16 +7,16 @@ import Link from "next/link";
 
 const Resources = () => {
   return (
-    <div className=" bg-[rgb(77,79,83)]  h-[400px] mt-20">
+    <div className=" bg-[rgb(77,79,83)]  max-h-max mt-20">
       <hr className="h-2 bg-[#de0083]" />
-      <div className="flex justify-between pt-20 items-center w-8/12 mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 my-10 xl:grid-cols-4 w-10/12 mx-auto">
         <Link href="https://innovation.brac.net/mobile-money/">
-          <div className="shadow-xl bg-[rgb(220,220,220)] cursor-pointer flex flex-col hover:text-white hover:underline justify-center items-center space-y-5 hover:bg-[#de0083] w-60 h-60 rounded-lg duration-500 text-[#de0083] border-2 border-[#de0083] ">
+        <div className="py-20 shadow-xl bg-[rgb(220,220,220)] cursor-pointer flex flex-col hover:text-white hover:underline justify-center items-center space-y-5 hover:bg-[#de0083]  rounded-lg text-[#de0083] border-2 border-[#de0083]">
             <div className="text-6xl ">
               <RiBookletFill />
             </div>
 
-            <h1 className="text-lg font-bold">Mobile Money Booklets</h1>
+            <h1 className="text-lg font-bold">Mobile Money </h1>
           </div>
         </Link>
         <Link
@@ -24,26 +24,29 @@ const Resources = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <div className="shadow-xl bg-[rgb(220,220,220)] cursor-pointer flex flex-col hover:text-white hover:underline justify-center items-center space-y-5 hover:bg-[#de0083] w-60 h-60 rounded-lg duration-500 text-[#de0083] border-2 border-[#de0083]">
+          <div className="py-20  shadow-xl bg-[rgb(220,220,220)] cursor-pointer flex flex-col hover:text-white hover:underline justify-center items-center space-y-5 hover:bg-[#de0083]  rounded-lg text-[#de0083] border-2 border-[#de0083]">
             <div className="text-6xl ">
               <MdReportProblem />
             </div>
             <h1 className="text-lg font-bold">Failure Reports</h1>
           </div>
         </Link>
-
-        <div className="shadow-xl bg-[rgb(220,220,220)] cursor-pointer flex flex-col hover:text-white hover:underline justify-center items-center space-y-5 hover:bg-[#de0083] w-60 h-60 rounded-lg duration-500 text-[#de0083] border-2 border-[#de0083] ">
+      <Link href="#">
+        <div className="py-20  shadow-xl bg-[rgb(220,220,220)] cursor-pointer flex flex-col hover:text-white hover:underline justify-center items-center space-y-5 hover:bg-[#de0083]  rounded-lg  text-[#de0083] border-2 border-[#de0083] ">
           <div className="text-6xl ">
             <FaToolbox />
           </div>
           <h1 className="text-lg font-bold">Toolkits</h1>
         </div>
-        <div className="shadow-xl bg-[rgb(220,220,220)] cursor-pointer flex flex-col hover:text-white hover:underline justify-center items-center space-y-5 hover:bg-[#de0083] w-60 h-60 rounded-lg duration-500 text-[#de0083] border-2 border-[#de0083] ">
+        </Link>
+        <Link href="#">
+        <div className="py-20 shadow-xl bg-[rgb(220,220,220)] cursor-pointer flex flex-col hover:text-white hover:underline justify-center items-center space-y-5 hover:bg-[#de0083]  rounded-lg  text-[#de0083] border-2 border-[#de0083] ">
           <div className="text-6xl ">
             <FiTarget />
           </div>
           <h1 className="text-lg font-bold">Impact Reports</h1>
         </div>
+        </Link>
       </div>
       <hr className="h-2 bg-[#de0083] border-none mt-16" />
     </div>

@@ -6,17 +6,19 @@ import Link from "next/link";
 
 const Thumbnail = ({ content, image, index }) => {
   return (
-    <div className="thumbnail ">
+    <div className="thumbnail flex-wrap">
       {content.map((item, i) => (
         <img
           key={i}
           src={item.img}
           alt=""
+          onMouseEnter={() => image(i)}
           onClick={() => image(i)}
           className={index === i ? "active" : ""}
         />
       ))}
     </div>
+
   );
 };
 
@@ -42,8 +44,9 @@ const Slideshow = ({ content }) => {
   };
   return (
     <div className="slideshow">
+      <div className="relative">
       <Link href={content[index].url}>
-        <div className="absolute z-10 bottom-[110px] pl-10 py-10  text-white w-full">
+        <div className="absolute z-10 bottom-[50px] pl-10 py-10  text-white w-full">
           <div className="text-2xl font-bold underline underline-offset-2">
             {content[index].title}
           </div>
@@ -73,6 +76,7 @@ const Slideshow = ({ content }) => {
           <AiOutlineArrowRight />
         </button>
       </div>
+      </div>
       <Thumbnail content={content} image={setIndex} index={index} />
     </div>
   );
@@ -85,32 +89,33 @@ const Stories = () => {
     });
   }, []);
   return (
-    <main className="h-[1150px] pt-28 w-8/12 bg-white mx-auto pb-20 text-black">
-      <div className="w-11/12 mx-auto">
-        <div className="flex items-center underline underline-offset-4 text-[#de0083] justify-between">
-          <h1
-            className={
-              scroll
-                ? " text-5xl font-bold title4 max-w-max hover:bg-[#de0083] hover:text-white pb-2"
-                : "text-5xl font-bold max-w-max hover:bg-[#de0083] hover:text-white pb-2"
-            }
-          >
-            Stories
-          </h1>
-          <Link href="https://innovation.brac.net/blog/">
-            <h2 className="story font-bold flex items-center cursor-pointer hover:scale-110 hover:font-bold duration-300">
-              <span className="underline">Read More Stories</span>
-              <span className="text-[#de0083] m-0">
-                <BiArrowToRight />
-              </span>
-            </h2>
-          </Link>
-        </div>
-        <p className="pt-6 text-black">
-          Read the latest stories, research and news from <br /> across the
-          foundation
-        </p>
-        {/* <div className="pt-20 flex">
+    <main id="blogs" className="bg-[rgb(245,245,245)]">
+      <div className="h-auto pt-28 w-10/12 bg-white mx-auto pb-20 text-black">
+        <div className="w-11/12 mx-auto">
+          <div className="flex items-center underline underline-offset-4 text-[#de0083] justify-between">
+            <h1
+              className={
+                scroll
+                  ? " text-5xl font-bold title4 max-w-max hover:bg-[#de0083] hover:text-white pb-2"
+                  : "text-5xl font-bold max-w-max hover:bg-[#de0083] hover:text-white pb-2"
+              }
+            >
+              Stories
+            </h1>
+            <Link href="https://innovation.brac.net/blog/">
+              <h2 className="story font-bold flex items-center cursor-pointer hover:scale-110 hover:font-bold duration-300">
+                <span className="underline">Read More Stories</span>
+                <span className="text-[#de0083] m-0">
+                  <BiArrowToRight />
+                </span>
+              </h2>
+            </Link>
+          </div>
+          <p className="pt-6 text-black">
+            Read the latest stories, research and news from <br /> across the
+            foundation
+          </p>
+          {/* <div className="pt-20 flex">
           <div className=" flex flex-col space-y-5 h-[650px] basis-7/12">
             <div className="h-[500px] relative shadow-2xl">
               <Image
@@ -149,7 +154,7 @@ const Stories = () => {
               </div>
             </div>
           </div> */}
-        {/*<div className="basis-5/12 space-y-12 pl-24">
+          {/*<div className="basis-5/12 space-y-12 pl-24">
             <div className=" flex flex-col space-y-5 h-[300px]">
               <div className="h-[450px] relative">
                 <Image
@@ -189,43 +194,45 @@ const Stories = () => {
             </div>
           </div>
         </div> */}
-        <div className="slideshowstories mt-10">
-          {" "}
-          <Slideshow
-            content={[
-              {
-                date: "February 19, 2020",
-                title: "Digital wages and what it means for women",
-                img: "/blog1.jpg",
-                url: "https://blog.brac.net/digital-wages-and-what-it-means-for-women/",
-              },
-              {
-                date: "January 19, 2020",
-                title: "Tackling a process innovation challenge 101",
-                img: "/blog2.jpg",
-                url: "https://blog.brac.net/tackling-a-process-innovation-challenge-101/",
-              },
-              {
-                date: "December 05, 2019",
-                title:
-                  "End gender-based violence: Integrated approaches from around the world",
-                img: "/blog3.jpg",
-                url: "https://blog.brac.net/end-gender-based-violence-integrated-approaches-from-around-the-world/",
-              },
-              {
-                date: "November 26, 2019",
-                title: "Digital cash: The future of humanitarian response?",
-                img: "/blog4.jpg",
-                url: "https://blog.brac.net/digital-cash-the-future-of-humanitarian-response/",
-              },
-              {
-                date: "October 23, 2019",
-                title: "Taking on tech: 3 stages that every NGO needs to know",
-                img: "/blog5.jpg",
-                url: "https://blog.brac.net/taking-on-tech-3-stages-that-every-ngo-needs-to-know/",
-              },
-            ]}
-          />
+          <div className="slideshowstories mt-10">
+            {" "}
+            <Slideshow
+              content={[
+                {
+                  date: "February 19, 2020",
+                  title: "Digital wages and what it means for women",
+                  img: "/blog1.jpg",
+                  url: "https://blog.brac.net/digital-wages-and-what-it-means-for-women/",
+                },
+                {
+                  date: "January 19, 2020",
+                  title: "Tackling a process innovation challenge 101",
+                  img: "/blog2.jpg",
+                  url: "https://blog.brac.net/tackling-a-process-innovation-challenge-101/",
+                },
+                {
+                  date: "December 05, 2019",
+                  title:
+                    "End gender-based violence: Integrated approaches from around the world",
+                  img: "/blog3.jpg",
+                  url: "https://blog.brac.net/end-gender-based-violence-integrated-approaches-from-around-the-world/",
+                },
+                {
+                  date: "November 26, 2019",
+                  title: "Digital cash: The future of humanitarian response?",
+                  img: "/blog4.jpg",
+                  url: "https://blog.brac.net/digital-cash-the-future-of-humanitarian-response/",
+                },
+                {
+                  date: "October 23, 2019",
+                  title:
+                    "Taking on tech: 3 stages that every NGO needs to know",
+                  img: "/blog5.jpg",
+                  url: "https://blog.brac.net/taking-on-tech-3-stages-that-every-ngo-needs-to-know/",
+                },
+              ]}
+            />
+          </div>
         </div>
       </div>
     </main>

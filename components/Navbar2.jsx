@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 
 
-const Navbar = () => {
+const Navbar2 = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isblogOpen, setIsblogOpen] = useState(false);
 
@@ -19,46 +19,46 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="z-50 ">
+    <nav className="z-50 bg-[#de0083]">
       <div className="flex items-center space-x-5 justify-between min-h-full w-10/12 mx-auto py-5">
         <div className="logo cursor-pointer ">
+          <Link href="/">
           <img
             src="/whitelogo.png"
-            onMouseOver={(e) => (e.currentTarget.src = "/logo.png")}
-            onMouseOut={(e) => (e.currentTarget.src = "/whitelogo.png")}
             width={120}
             height={120}
             alt=""
-          ></img>
+          />
+          </Link>
         </div>
         <ul className={`hidden lg:flex space-x-8`}>
 
-          <Link href="/" scroll={false}>
-            <li className="cursor-pointer text-white hover:text-[#de0083] lg:text-base xl:text-xl">
+          <Link href="/">
+            <li className="cursor-pointer text-white lg:text-base xl:text-xl">
               Home
             </li>
           </Link>
-          <Link href="/#whoweare" scroll={false}> 
-            <li className="cursor-pointer text-white hover:text-[#de0083] lg:text-base xl:text-xl">
+          <Link href="/#whoweare"> 
+            <li className="cursor-pointer text-white lg:text-base xl:text-xl">
               Who We Are
             </li>
           </Link>
-          <Link href="/#whatwedo" scroll={false}>
-            <li className="cursor-pointer text-white hover:text-[#de0083] lg:text-base xl:text-xl">
+          <Link href="/#whatwedo">
+            <li className="cursor-pointer text-white lg:text-base xl:text-xl">
               What We Do
             </li>
           </Link>
-          <Link href="/#howwedoit" scroll={false}>
-            <li className="cursor-pointer text-white hover:text-[#de0083] lg:text-base xl:text-xl">
+          <Link href="/#howwedoit">
+            <li className="cursor-pointer text-white lg:text-base xl:text-xl">
               How We Do It
             </li>
           </Link>
-          <Link href="/#partners" scroll={false}>
-            <li className="cursor-pointer text-white hover:text-[#de0083] lg:text-base xl:text-xl">
+          <Link href="/#partners">
+            <li className="cursor-pointer text-white lg:text-base xl:text-xl">
               Partners
             </li>
           </Link>
-          <div>
+          <Link href="/#blogs">
             <li className="relative cursor-pointer text-white lg:text-base xl:text-xl">
               <div>Blog</div> 
               <div className="hidden absolute top-full left-1/2 transform -translate-x-1/2 duration-150">
@@ -66,9 +66,10 @@ const Navbar = () => {
                 <Link href="https://medium.com/"><div className="bg-white p-4 shadow-md mt-2 text-[#de0083]">Medium</div></Link>
               </div>
             </li>
-          </div>
-          <Link href="/#contactus" scroll={false}>
-            <li className="cursor-pointer text-white hover:text-[#de0083] lg:text-base xl:text-xl">
+          </Link>
+          
+          <Link href="/#contactus">
+            <li className="cursor-pointer text-white lg:text-base xl:text-xl">
               Contact Us
             </li>
           </Link>
@@ -77,7 +78,7 @@ const Navbar = () => {
       </div>
 
       
-      <div className={`bg-[#de0083] z-20 w-[300px] duration-500 h-screen fixed   ${isNavOpen ? "top-0 right-0" : "top-0 -right-80"}`}>
+        <div className={`bg-[#de0083] z-20 w-[300px] duration-500 h-screen fixed   ${isNavOpen ? "top-0 right-0" : "top-0 -right-80"}`}>
           <div className="flex items-center justify-center h-full">
             <ul className="flex flex-col justify-center space-y-10 max-h-[20vh] divide-y-2 divide-y-reverse">
               <div className='absolute right-12 top-[3.4rem] text-white text-4xl cursor-pointer' onClick={toggleNav}> <IoCloseSharp/></div>
@@ -112,14 +113,14 @@ const Navbar = () => {
                 </li>
               </div>
               {isblogOpen && (
-                <Link href="https://innovation.brac.net/blog/" scroll={false} onClick={toggleNav}>
+                <Link href="/#blogs" scroll={false} onClick={toggleNav}>
                   <li className="relative cursor-pointer text-white text-2xl">
                     <div>Silverlining</div>
                   </li>
                 </Link>
               )}
               {isblogOpen && (
-                <Link href="https://medium.com/" scroll={false} onClick={toggleNav}>
+                <Link href="/#blogs" scroll={false} onClick={toggleNav}>
                   <li className="relative cursor-pointer text-white text-2xl">
                     <div>Medium</div>
                   </li>
@@ -138,4 +139,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Navbar2;

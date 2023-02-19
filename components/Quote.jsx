@@ -3,8 +3,8 @@ import React from "react";
 
 const Quote = () => {
   return (
-    <div className="bg-[rgb(245,245,245)]  py-28 mt-20 my-40">
-      <article className="w-7/12 mx-auto text-3xl leading-normal">
+    <div className="bg-[rgb(245,245,245)]  py-28 my-20">
+      <article className="w-11/12 md:w-9/12 lg:w-8/12 xl:w-7/12  mx-auto text-3xl leading-normal">
         A world{" "}
         <span className="title5 font-bold underline decoration-[#de0083] underline-offset-8 hover:bg-[#de0083] duration-1000">
           free from all forms of exploitation and discrimination{" "}
@@ -36,11 +36,11 @@ const Quote = () => {
             >
               <g>
                 <polygon
-                  class="arrow"
+                  className="arrow"
                   points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"
                 ></polygon>
                 <polygon
-                  class="arrow-fixed"
+                  className="arrow-fixed"
                   points="16.3746667 8.33860465 7.76133333 15.3067621 6.904 14.3175671 14.2906667 8.34246869 6.908 2.42790698 7.76 1.43613596"
                 ></polygon>
                 <path d="M-4.58892184e-16,0.56157424 L-4.58892184e-16,16.1929159 L9.708,8.33860465 L-1.64313008e-15,0.56157424 L-4.58892184e-16,0.56157424 Z M1.33333333,3.30246869 L7.62533333,8.34246869 L1.33333333,13.4327013 L1.33333333,3.30246869 L1.33333333,3.30246869 Z"></path>

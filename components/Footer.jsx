@@ -7,10 +7,9 @@ import { FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#212121] h-[350px] text-white">
-      <hr className="bg-[#de0083] pt-3" />
-      <h1 className="text-3xl pb-3 text-center pt-16">Contact Us</h1>
-      <div className="flex w-7/12 mx-auto pt-6 justify-between items-center">
+    <footer id="contactus" className="bg-[#212121] h-[300px] text-white">
+      <h1 className="text-3xl pb-3 text-center pt-10">Contact Us</h1>
+      <div className="flex w-11/12 md:w-7/12 mx-auto pt-6 justify-between items-center">
         <div className="flex flex-col flex-wrap max-w-fit">
           <p className="pb-1">
             Bangladesh/Headquarters: <br />

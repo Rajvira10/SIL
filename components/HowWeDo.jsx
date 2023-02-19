@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 const HowWeDo = () => {
@@ -9,7 +10,7 @@ const HowWeDo = () => {
     });
   }, []);
   return (
-    <main className="bg-white pt-32  w-7/12 mx-auto h-[650px]">
+    <main id="howwedoit" className="bg-white pt-20 pb-10  w-9/12 mx-auto max-h-max">
       <div className="font-bold text-5xl text-center pb-5 flex justify-center ">
         <h1
           className={
@@ -21,48 +22,40 @@ const HowWeDo = () => {
           How We Do It
         </h1>
       </div>
-      <div className="pt-16 flex space-x-10 items-center">
-        <div className="h-[300px] w-full space-y-12 basis-1/2">
-          <div className="flex items-center">
-            <div className="bg-[#de0083] h-16 w-16 min-w-[64px] rounded-full mr-5"></div>
-            <div>
-              <h2 className="font-bold text-xl pb-2">Simplify</h2>
-              <p>
-                We seek to understand our users and what drives them to frame
-                the problem we will be working to solve.
-              </p>
-            </div>
-          </div>
-          <div className="flex items-center">
-            <div className="bg-[#de0083] h-16 w-16 min-w-[64px] rounded-full mr-5"></div>
-            <div>
-              <h2 className="font-bold text-xl pb-2">Ideate</h2>
-              <p>
-                We make sense of what we have found and identify opportunities
-                for testing.
-              </p>
-            </div>
-          </div>
-          <div className="flex items-center">
-            <div className="bg-[#de0083] h-16 w-16 min-w-[64px] rounded-full mr-5"></div>
-            <div>
-              <h2 className="font-bold text-xl pb-2">Learn</h2>
-              <p>
-                We bring our ideas to life, and test to evaluate what can be
-                viable.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <Image
-          src="/howwedoit.png"
-          width={500}
-          height={100}
-          alt=""
-          className="basis-1/2"
-        />
+      <div className="my-6">
+        <h1 className="text-center text-3xl font-bold underline">Our Approach to Innovation</h1>
+        <p className="text-xl py-3">Our guiding anchor is largely based on BRAC’s innovation ideals. ‘Innovation’ at BRAC means the development of a differentiated offering (or process) that empowers BRAC’s clients, partners and employees in a changing external context. 
+        All that we do is anchored by our mantras of innovation.  
+        Our approach to innovation can be easily understood by design, enterprise thinking, co-creation and frugal innovation components:
+</p>
       </div>
+
+      <div className="buttonhover flex flex-col md:flex-row w-full justify-around space-y-4 md:space-y-0 md:space-x-4 text-[#de0083] font-bold text-2xl mt-8  text-center">
+        
+      <div className="w-full border-4 border-[#de0083] py-4 px-5 rounded-xl cursor-pointer">
+          <Link href="/design">Design <span></span><span></span><span></span><span></span><span></span><span></span></Link>
+            
+          </div>
+        
+        
+          <div className="w-full border-4 border-[#de0083] py-4 px-5 rounded-xl cursor-pointer">
+          <Link href="/enterprise-thinking">Enterprise Thinking <span></span><span></span><span></span><span></span><span></span><span></span></Link>
+            
+          </div>
+
+        
+        <div className="w-full border-4 border-[#de0083] py-4 px-5 rounded-xl cursor-pointer">
+        <Link href="/co-creation">Co-creation <span></span><span></span><span></span><span></span><span></span><span></span></Link>
+          
+        </div>
+        
+
+        <div className="w-full border-4 border-[#de0083] py-4 px-5 rounded-xl cursor-pointer">
+        <Link href="/frugal-innovation">Frugal Innovation           <span></span><span></span><span></span><span></span><span></span><span></span></Link>
+
+        </div>
+      </div>
+
     </main>
   );
 };
