@@ -3,6 +3,17 @@
 @tailwind utilities;
 /* @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"); */
 
+@font-face {
+  font-family: Helvetica-Neue;
+  src: url("/Helvetica Neue CE 55 Roman.ttf");
+}
+
+@font-face {
+  font-family: Helvetica-Neue;
+  font-weight: bold;
+  src: url("/Helvetica Neue CE 75 Bold.ttf");
+}
+
 :root {
   --primary-color: #de0083;
   --slider-padding: 5rem;
@@ -44,10 +55,49 @@ html::-webkit-scrollbar-track {
   border-radius: 30px;
 }
 
+.thumbnail::-webkit-scrollbar {
+  margin-top: 20px;
+  width: 0.2vw;
+}
+
+.thumbnail::-webkit-scrollbar-thumb {
+  background-color: rgb(222, 0, 131);
+  border-radius: 30px;
+}
+
+.thumbnail::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(222, 0, 131, 1);
+}
+
+.thumbnail::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 30px;
+}
+
+
+.whatwedo-scroll::-webkit-scrollbar {
+  margin-top: 20px;
+  width: 0.75vw;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 30px;
+}
+
+.whatwedo-scroll::-webkit-scrollbar-thumb {
+  background-color: rgba(222, 0, 131, 0.5);
+  border-radius: 30px;
+}
+
+
+.whatwedo-scroll::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 30px;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *::after,
@@ -56,7 +106,11 @@ html::-webkit-scrollbar-track {
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica-Neue, sans-serif;
+  scroll-behavior: smooth;
 }
 
 body::before {
@@ -159,7 +213,7 @@ nav a:hover {
   color: #ffffff;
 }
 .title4 {
-  box-shadow: inset 500px 0 0 0 #de0083;
+  box-shadow: inset 2000px 0 0 0 #de0083;
   color: #ffffff;
   margin: 0 -0.25rem;
   padding: 0 0.25rem;
@@ -287,9 +341,9 @@ nav a:hover {
   align-items: center;
 }
 
-.slideshow {
+/* .slideshow {
   position: relative;
-}
+} */
 
 .mainImg {
   transition: all 500ms;
@@ -354,9 +408,11 @@ nav a:hover {
   margin-top: 30px;
 }
 .thumbnail img {
-  height: 80px;
-  width: 150px;
+  height: 100px;
+  width: 200px;
   object-fit: cover;
+  margin-right: 2px;
+  border: 2px solid #de0083;
 }
 
 .bg-svg {
@@ -375,7 +431,7 @@ nav a:hover {
 }
 
 .whoweare img {
-  max-width: 500px;
+  max-width: 450px;
   max-height: 300px;
 }
 
@@ -442,4 +498,146 @@ path {
 
 .story svg {
   margin: 0;
+}
+
+.wrapper,
+.single-card {
+  position: relative;
+}
+
+.single-card {
+  transition: all 1s cubic-bezier(0.7, -0.5, 0.3, 1.8);
+  transform-style: preserve-3d;
+}
+
+.wrapper:hover .single-card {
+  transform: rotateY(180deg);
+}
+
+.front,
+.back {
+  position: relative;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+}
+
+.front {
+  cursor: pointer;
+  backface-visibility: hidden;
+}
+
+.back {
+  padding: 20px 10px 0 10px;
+  transform: rotateY(180deg);
+  position: absolute;
+  background-color: white;
+  height: 100%;
+  width: 270px;
+  border-radius: 20px;
+}
+
+.newsletter {
+  background-image: url("/newsletter.jpg");
+  height: 500px;
+  background-position: 10% 60%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.newimg img {
+  height: 400px;
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 50px;
+}
+.marquee {
+  width: 100%;
+  line-height: 30px;
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.marquee p {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 10s linear infinite;
+}
+@keyframes marquee {
+  0%   { transform: translate(0, 0); }
+  100% { transform: translate(-70%, 0); }
+}
+
+.buttonhover div{
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.buttonhover div span{
+  --c: #de0083;
+  position: absolute;
+    width: 25%;
+    height: 100%;
+    background-color: var(--c);
+    transform: translateY(150%);
+    border-radius: 50%;
+    left: calc((var(--n) - 1) * 25%);
+    transition: 0.5s;
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+    z-index: -1;
+}
+
+.buttonhover div:hover span {
+  transform: translateY(0) scale(2);
+}
+
+.buttonhover div:hover{
+  color: white;
+}
+
+.buttonhover div span:nth-child(1) {
+  --n: 1;
+}
+
+.buttonhover div span:nth-child(2) {
+  --n: 2;
+}
+
+.buttonhover div span:nth-child(3) {
+  --n: 3;
+}
+
+.buttonhover div span:nth-child(4) {
+  --n: 4;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.design_image {
+  width: auto !important;
+  margin: 0 auto;
+  height: auto !important;
+  
+}
+li:hover > div  {
+  display: block;
+}
+
+li:hover > .sub-menu {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+.sub-menu {
+  display: none;
 }
