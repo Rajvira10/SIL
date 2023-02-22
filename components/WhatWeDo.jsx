@@ -73,7 +73,7 @@ const WhatWeDo = () => {
         <Card
           title="Programme Collaboration"
           link="/program-collaboration"
-          image="/Programme Collaboration.JPG"
+          image="/Programme Collaboration.jpg"
           para="Creating space for knowledge and partnerships."
           back="In the context of Bangladesh, the rapid adoption of mobile money has created exciting opportunities to accelerate financial inclusion for people living in poverty, and particularly women."
         />
@@ -94,7 +94,7 @@ const WhatWeDo = () => {
                 <Card
           title="Incubation"
           link="/incubation"
-          image = "/Incubation.JPG"
+          image = "/Incubation.jpg"
           para="Redesigning models and services putting people first."
           back="Launched in October 2021, the STITCH for RMG: Global Innovation Challenge has finally come to an end after three-month-long rigorous competition to crowdsource innovations that can safeguard the livelihood of Bangladeshi women garment workers of the RMG industry. BRAC, H&M Foundation, and The Asia Foundation announced the six winners last Tuesday, 7 February 2022"
           />
