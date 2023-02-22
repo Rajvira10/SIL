@@ -12,7 +12,7 @@ const Enterprise = () => {
         <div>
           <img src="/enterprise.JPG" alt="" />
 
-          <div className=" w-9/12 mx-auto">
+          <div className="w-11/12 md:w-9/12 mx-auto">
 
             <p className="pt-10  text-lg text-justify">
             Social enterprises offer an intersection of business and traditional non-profit. By design, BRAC social enterprises are self-sustaining cause-driven business entities that create social impact by offering solutions to social challenges. 

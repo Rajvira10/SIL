@@ -14,7 +14,7 @@ const Moonshots = () => {
         <div>
           <img src="/amranotunnetwork.JPG" alt="" />
 
-          <div className=" w-9/12 mx-auto">
+          <div className=" w-11/12 md:w-9/12 mx-auto">
             <h2 className="text-5xl font-bold title4 max-w-max hover:bg-[#de0083] hover:text-white mb-5">
             Amra Notun Network
             </h2>

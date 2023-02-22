@@ -14,7 +14,7 @@ const Collaboration = () => {
         <div>
           <img src="/innovationfund.jpeg" height="200" alt="" />
 
-          <div className=" w-9/12 mx-auto">
+          <div className="w-11/12 md:w-9/12 mx-auto">
             <h2 className="text-5xl font-bold title4 max-w-max hover:bg-[#de0083] hover:text-white mb-5">
             Innovation Fund
             </h2>
@@ -29,7 +29,7 @@ const Collaboration = () => {
         <div>
           <img src="/market.jpg" height="200" alt="" />
 
-          <div className=" w-9/12 mx-auto">
+          <div className="w-11/12 md:w-9/12 mx-auto">
             <h2 className="text-5xl font-bold title4 max-w-max hover:bg-[#de0083] hover:text-white mb-5">
             Improving the go-to-market of a social enterprise providing land-based legal service 
 
@@ -45,7 +45,7 @@ const Collaboration = () => {
           
           <img src="/travelagency.png" height="200" alt="" className="design_image"/>
 
-          <div className=" w-9/12 mx-auto">
+          <div className="w-11/12 md:w-9/12 mx-auto">
             <h2 className="text-5xl font-bold title4 max-w-max hover:bg-[#de0083] hover:text-white mb-5">
             Assessing the viability of a travel-based social enterprise 
 
@@ -64,7 +64,7 @@ const Collaboration = () => {
           
           <img src="/bplanalytics.png" height="200" alt="" className="design_image"/>
 
-          <div className=" w-9/12 mx-auto">
+          <div className="w-11/12 md:w-9/12 mx-auto">
             <h2 className="text-5xl font-bold title4 max-w-max hover:bg-[#de0083] hover:text-white mb-5">
             Business development analytics for a social enterprise providing low-cost migration services
             </h2>

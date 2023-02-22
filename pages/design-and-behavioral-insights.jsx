@@ -15,7 +15,7 @@ const DesignandBehavioral = () => {
         <div>
           <img src="/innovationfund.jpeg" height="200" alt="" />
 
-          <div className=" w-9/12 mx-auto">
+          <div className=" w-11/12 md:w-9/12 mx-auto">
             <h2 className="text-5xl font-bold title4 max-w-max hover:bg-[#de0083] hover:text-white mb-5">
             Hygiene and Behaviour Change Coalition 
             </h2>
@@ -31,7 +31,7 @@ const DesignandBehavioral = () => {
         <div>
           <img src="/market.jpg" height="200" alt="" className="design_image"/>
 
-          <div className=" w-9/12 mx-auto">
+          <div className=" w-11/12 md:w-9/12 mx-auto">
             <h2 className="text-5xl font-bold title4 max-w-max hover:bg-[#de0083] hover:text-white mb-5">
             Using nudge to reduce sexual harassment in buses 
 

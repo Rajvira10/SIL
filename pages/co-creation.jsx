@@ -12,7 +12,7 @@ const CoCreation = () => {
         <div>
           <img src="/cocreation.jpeg" className="object-top" alt="" />
 
-          <div className=" w-9/12 mx-auto">
+          <div className=" w-11/12 md:w-9/12 mx-auto">
 
             <p className="pt-10  text-lg text-justify">
             We connect people through several platforms that foster knowledge sharing and partnerships. As an innovation hub, we are continuously learning about innovations and disseminating the best practices across BRAC and the development sector. We host forums, workshops and learning sessions to engage key stakeholders in conversations around innovation and cross-cutting development issues. Through these initiatives, we aim to create a collaborative ecosystem of innovative ideas and development insights.

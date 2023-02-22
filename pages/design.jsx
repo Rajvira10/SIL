@@ -15,7 +15,7 @@ const Design = () => {
         <div>
           <img src="/innovationfund.jpeg" height="200" alt="" />
 
-          <div className=" w-9/12 mx-auto">
+          <div className="w-11/12 md:w-9/12 mx-auto">
             <p className="pt-10 pb-20 text-lg text-justify">
             A human-centred approach to design is our guiding principle. We design keeping users at the heart of our work, and we design in collaboration with our stakeholders. We divide our work process into three phases: simplify, ideate and learn. You can remember it by the mnemonic S-I-L
 
@@ -28,7 +28,7 @@ const Design = () => {
         <div>
           <img src="/howwedoit.png" className="design_image" height="200" alt="" />
 
-          <div className=" w-9/12 mx-auto text-lg">
+          <div className=" w-11/12 md:w-9/12 mx-auto text-lg">
             <div>
             <p><span className="text-[#de0083] font-bold">Simplify:</span>  We seek to understand our users and what drives them to frame the problem we will be working to solve. </p> 
           <p><span className="text-[#de0083] font-bold">Ideate:</span>  We make sense of what we have found and identify opportunities for testing.</p>
