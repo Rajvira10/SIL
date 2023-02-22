@@ -62,7 +62,7 @@ const Navbar = () => {
               Blogs 
               <div className="hidden absolute top-full left-1/2 transform -translate-x-1/2 duration-150">
                 <Link href="https://innovation.brac.net/blog/"><div className="bg-white p-4 shadow-md text-[#de0083]">Silverlining</div></Link> 
-                <Link href="https://medium.com/"><div className="bg-white p-4 shadow-md mt-2 text-[#de0083]">Medium</div></Link>
+                <Link href="https://medium.com/brac-social-innovation-lab"><div className="bg-white p-4 shadow-md mt-2 text-[#de0083]">Medium</div></Link>
               </div>
             </li>
           <Link href="/#contactus" scroll={false}>
@@ -117,7 +117,7 @@ const Navbar = () => {
                 </Link>
               )}
               {isblogOpen && (
-                <Link href="https://medium.com/" scroll={false} onClick={toggleNav}>
+                <Link href="https://medium.com/brac-social-innovation-lab" scroll={false} onClick={toggleNav}>
                   <li className="relative cursor-pointer text-white text-2xl">
                     <div>Medium</div>
                   </li>

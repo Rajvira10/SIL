@@ -15,20 +15,43 @@ const Events = () => {
   // useEffect(() => {
   //   setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth);
   // }, []);
-  const images = [
-    "/fif2022.jpg",
-    "/fif2022.jpg",
-    "/fif2022.jpg",
-    "/fif2022.jpg",
-    "https://via.placeholder.com/210?text=2",
-    "https://via.placeholder.com/220?text=3",
-    "https://via.placeholder.com/280?text=4",
-    "https://via.placeholder.com/270?text=5",
-    "https://via.placeholder.com/250?text=6",
-    "https://via.placeholder.com/220?text=7",
-    "https://via.placeholder.com/250?text=8",
-    "https://via.placeholder.com/270?text=9",
-    "https://via.placeholder.com/290?text=10",
+  const infos = [
+    {
+      image: "/fif2022.jpg",
+      title: "Frugal Innovation Forum 2022",
+      date: "11-13 October 2022",
+      link: "https://innovation.brac.net/fif2022/",
+    },
+    {
+      image: "/fif2022.jpg",
+      title: "Runway to Frugal Innovation 2022",
+      date: "17-19 May 2022",
+      link: "https://innovation.brac.net/fif2022/",
+    },
+    {
+      image: "/fif2022.jpg",
+      title: "Frugal Innovation Forum 2019",
+      date: "2-4 March 2019",
+      link: "https://innovation.brac.net/fif2019/",
+    },
+    {
+      image: "/fif2022.jpg",
+      title: "Frugal Innovation Forum 2017",
+      date: "9-11 October 2017",
+      link: "https://innovation.brac.net/fif2017/",
+    },
+    {
+      image: "/fif2022.jpg",
+      title: "Frugal Innovation Forum 2016",
+      date: "22-24 March 2016",
+      link: "https://innovation.brac.net/fif2016/",
+    },
+    {
+      image: "/fif2022.jpg",
+      title: "Frugal Innovation Forum 2015",
+      date: "23-24 March 2015",
+      link: "https://innovation.brac.net/fif2015/",
+    },
   ];
   return (
     <div className="h-[730px]  bg-[rgb(77,79,83)]   mx-auto">
@@ -50,16 +73,16 @@ const Events = () => {
           Discover Our Events
         </h2>
         <div className="flex w-4/5 mx-auto overflow-x-scroll space-x-5 whatwedo-scroll pb-5">
-          {images.map((image) => {
+          {infos.map((info) => {
             return (
-              <div className="item basis-1/3" key={image}>
-                <img src={image} alt="img" className="object-cover relative" />
-                <Link href="https://innovation.brac.net/fif2022/">
+              <div className="item min-h-[600px] basis-1/3" key={info.title}>
+                <img src={info.image} alt="img" className="object-cover relative" height="400px" />
+                <Link href={info.link}>
                   <div className="absolute text-inside bottom-10 text-center w-full z-20 text-white ">
                     <h1 className="font-bold text-xl hover:underline hover:underline-offset-4">
-                      Frugal Innovation Forum 2022
+                      {info.title}
                     </h1>
-                    <p>11 October - 13 October</p>
+                    <p>{info.date}</p>
                   </div>
                 </Link>
               </div>

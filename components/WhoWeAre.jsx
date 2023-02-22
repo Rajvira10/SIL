@@ -39,7 +39,7 @@ const WhoWeAre = () => {
         <div className="basis-4/12 whoweare ">
           <Image
             src="/FIF.jpg"
-            width={500}
+            width={400}
             height={500}
             alt="who we are"
             className="rounded-3xl"
