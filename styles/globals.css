@@ -285,7 +285,7 @@ nav a:hover {
 
 .item {
   margin-top: 30px;
-  min-height: 15rem;
+  min-height: 20rem;
   min-width: 20rem;
   position: relative;
 }
@@ -433,6 +433,13 @@ nav a:hover {
 .whoweare img {
   max-width: 450px;
   max-height: 300px;
+}
+
+@media (max-width: 767px) {
+  .whoweare img {
+    max-width: 250px;
+    max-height: 300px;
+  }
 }
 
 .text-inside {
@@ -640,4 +647,11 @@ li:hover > .sub-menu {
 }
 .sub-menu {
   display: none;
+}
+.resources{
+  background-image: repeating-linear-gradient(135deg, rgb(77,79,83) , rgb(100,100,100) 1px, transparent 2px, transparent 5px);
+}
+.card__image{
+  width: 100%;
+  height: 200px;
 }
