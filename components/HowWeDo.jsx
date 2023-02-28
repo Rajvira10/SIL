@@ -10,7 +10,7 @@ const HowWeDo = () => {
     });
   }, []);
   return (
-    <main id="howwedoit" className="bg-white pt-20 pb-10  w-9/12 mx-auto max-h-max">
+    <main id="howwedoit" className="bg-white pt-20 pb-10  w-11/12 md:w-9/12 mx-auto max-h-max">
       <div className="font-bold text-5xl text-center pb-5 flex justify-center ">
         <h1
           className={
