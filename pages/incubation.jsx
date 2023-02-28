@@ -1,9 +1,51 @@
 import Link from "next/link";
-import React from "react";
+import React,{ useState } from "react";
 import Footer from "../components/Footer";
 import Navbar2 from "../components/Navbar2";
+import {BsChevronCompactLeft} from "react-icons/bs";
+import {BsChevronCompactRight} from "react-icons/bs";
 
 const Crowdsourcing = () => {
+  const [index, setIndex] = useState(2)
+
+  const content = [{
+    id: 1,
+    image: "Agroshift.png",
+    title: "1. Agroshift - Aiming to create a demand-driven digital grocery platform for RMG workers",
+    para: "Agroshift has designed a digital grocery ordering platform for RMG factory workers and employees providing primarily agro commodities like vegetables, fruits, rice, pulses, milk and meat, along with other daily needs. Workers can place digital orders through a mobile app or physically through ordering kiosks setup at designated places within the factories. Agroshift will fulfill orders by procuring directly from their farmer networks, taking care of the sorting, grading, packaging and delivery at factories, saving time for the female garment workers from doing daily groceries and improving the uptake of nutrition. During the incubation phase, Agroshift will roll out the pilot at Echotex Ltd. (Partner Factory)." 
+  },
+  {
+    id: 2,
+    image: "i-smart.jpg",
+    title: "2. i-SMART- Developing a standardized skill matrix for women sewing workers",
+    para: "i-SMART team aims to introduce a standardized skill rating matrix for the assessment of the workers’ skills, reducing the chances of exploitation and underappreciation of talents in factories. Through training and equipment dry-run in the factory, they will deploy the rating process and remotely monitor the progress through telephone/VC/e-mail. The pilot aims to complete the rating of 1000 sewing workers showing 09 different generic skill rating scores during the pilot phase, collect the feedback of direct stakeholders (women sewing workers and supervisors and management), and meet other prospective garment manufacturers for wider adoption across the industry. During the incubation phase, i-Smart will roll out the pilot at Aswad Composite Mills Ltd. (Partner Factory). During the incubation phase, i-Smart will roll out the pilot at Aswad Composite Mills Ltd. (Partner Factory)."
+  },
+  {
+    id: 3,
+    image: "Jyoti-Team-2.jpg",
+    title: "3. Jyoti- Removing the barriers of access to sanitary pads for RMG factory workers improving menstrual hygiene",
+    para: "Jyoti team will install smart vending machines on factory floors where female employees can access and collect sanitary pads at an affordable price. The team’s initiative also includes awareness build-up and training on smart collection processes for the employees. The pilot aims to make sanitary pads affordable and easily accessible by women garment workers and build the habit of using menstrual hygiene products among the workers by making it accessible to them.During the incubation phase, Jyoti will roll out the pilot at Meghna Knit Composite Ltd. (Partner Factory)."
+  },
+  {
+    id: 4,
+    image:"image.jpg",
+    title: "4.Quizrr- Building female RMG role models through skill and leadership development training ",
+    para: "Quizrr aspires to equip women in the RMG sector with knowledge, skills and tools on dialogue-based problem solving, equality, leadership qualities and digital literacy, preparing them for new learnings and opportunities in the Bangladesh RMG sector of the future. Quizrr will make training available through an engaging worker-centric platform, on touchscreen tablets and smartphones - reaching employees in, or even before entering the RMG sector in Bangladesh. The tech-based training promotes collaborative skills and digital literacy along with infusing knowledge and confidence in the individual. During the incubation phase, Quizrr will roll out the pilot at Alliance Stitches Limited (Partner Factory)."
+  },
+  {
+    id: 5,
+    image: "sustify.jpg",
+    title: "5. Sustify- Building capacity through gamified microlearning for female factory workers in Bangladesh",
+    para: "Sustify is an interactive e-learning platform used on tablets that gamifies learning on work-related topics and increases digital skills. Sustify intends to offer a low-threshold and motivating entry into workplace learning for female garment workers with little learning experience through specially designed courses. Sustify will develop courses including subjects such as (female) worker rights, in the long run increasing retention. During the incubation phase, Sustify will roll out the pilot at Tarasima Apparels Ltd. (Partner Factory)."
+  },
+  {
+    id: 6,
+    image: "togumogu.jpg",
+    title: "6. ToguMogu- Supporting female RMG workers through a health and wellbeing platform making their parenthood stress-free",
+    para: "ToguMogu is a one-stop parenting platform, aiming to provide health and wellbeing support to female garment workers from the stage of pregnancy to the first 5 years of their children’s lives. During the pilot phase, they intend to develop a primary healthcare support solution for female RMG workers through their app, develop a low-tech version of the platform for non-smartphone users, and appropriate contextualized contents for female RMG workers, while arranging workshops on physical health during pregnancy and child development to onboard the workers in the platform. The goal of the pilot is to ensure job retention after pregnancy and other health issues of female garment workers. During the incubation phase, ToguMogu will roll out the pilot at Pioneer Knitwears (BD) Ltd. (Partner Factory)."
+  }
+]
+
   return (
     <div className="min-h-screen text-lg">
       <Navbar2 />
@@ -20,7 +62,7 @@ const Crowdsourcing = () => {
             </Link>
 
             
-            <h3 className="text-3xl font-bold mt-5">Futureproofing RMG workplace in Bangladesh- STITCH FOR RMG Announces its First Cohort</h3>
+            <div className="text-3xl font-bold mt-5">Futureproofing RMG workplace in Bangladesh- STITCH FOR RMG Announces its First Cohort</div>
             <div className="pt-5 pb-20 text-lg text-justify">
               Launched in October 2021, the STITCH for RMG: Global Innovation Challenge has finally come to an end after three-month-long rigorous competition to crowdsource innovations that can safeguard the livelihood of Bangladeshi women garment workers of the RMG industry. BRAC, H&M Foundation, and The Asia Foundation announced the six winners last Tuesday, 7 February 2022. 
               <br />  
@@ -34,80 +76,39 @@ const Crowdsourcing = () => {
 
 
 
-              <div className="space-x-3 mx-auto mt-5">
-              <div className="text-2xl font-bold mt-10">   1. Agroshift - Aiming to create a demand-driven digital grocery platform for RMG workers </div>
-Agroshift has designed a digital grocery ordering platform for RMG factory workers and employees providing primarily agro commodities like vegetables, fruits, rice, pulses, milk and meat, along with other daily needs. Workers can place digital orders through a mobile app or physically through ordering kiosks setup at designated places within the factories. Agroshift will fulfill orders by procuring directly from their farmer networks, taking care of the sorting, grading, packaging and delivery at factories, saving time for the female garment workers from doing daily groceries and improving the uptake of nutrition.
-During the incubation phase, Agroshift will roll out the pilot at Echotex Ltd. (Partner Factory).
-<br />
-<div className="text-2xl font-bold mt-10">   2. i-SMART- Developing a standardized skill matrix for women sewing workers </div>
-
-i-SMART team aims to introduce a standardized skill rating matrix for the assessment of the workers’ skills, reducing the chances of exploitation and underappreciation of talents in factories. Through training and equipment dry-run in the factory, they will deploy the rating process and remotely monitor the progress through telephone/VC/e-mail. The pilot aims to complete the rating of 1000 sewing workers showing 09 different generic skill rating scores during the pilot phase, collect the feedback of direct stakeholders (women sewing workers and supervisors and management), and meet other prospective garment manufacturers for wider adoption across the industry. During the incubation phase, i-Smart will roll out the pilot at Aswad Composite Mills Ltd. (Partner Factory).
-During the incubation phase, i-Smart will roll out the pilot at Aswad Composite Mills Ltd. (Partner Factory).
-<br />
-<div className="text-2xl font-bold mt-10"> 3. Jyoti- Removing the barriers of access to sanitary pads for RMG factory workers improving menstrual hygiene </div>
-Jyoti team will install smart vending machines on factory floors where female employees can access and collect sanitary pads at an affordable price. The team’s initiative also includes awareness build-up and training on smart collection processes for the employees. The pilot aims to make sanitary pads affordable and easily accessible by women garment workers and build the habit of using menstrual hygiene products among the workers by making it accessible to them. 
-<br />
-During the incubation phase, Jyoti will roll out the pilot at Meghna Knit Composite Ltd. (Partner Factory).
-<br />
-<div className="text-2xl font-bold mt-10"> 
-4.Quizrr- Building female RMG role models through skill and leadership development training
-</div>
-Quizrr aspires to equip women in the RMG sector with knowledge, skills and tools on dialogue-based problem solving, equality, leadership qualities and digital literacy, preparing them for new learnings and opportunities in the Bangladesh RMG sector of the future. Quizrr will make training available through an engaging worker-centric platform, on touchscreen tablets and smartphones - reaching employees in, or even before entering the RMG sector in Bangladesh. The tech-based training promotes collaborative skills and digital literacy along with infusing knowledge and confidence in the individual. 
-<br />
-During the incubation phase, Quizrr will roll out the pilot at Alliance Stitches Limited (Partner Factory).
-<br />
-<div className="text-2xl font-bold mt-10"> 5. Sustify- Building capacity through gamified microlearning for female factory workers in Bangladesh </div>
-Sustify is an interactive e-learning platform used on tablets that gamifies learning on work-related topics and increases digital skills. Sustify intends to offer a low-threshold and motivating entry into workplace learning for female garment workers with little learning experience through specially designed courses. Sustify will develop courses including subjects such as (female) worker rights, in the long run increasing retention. <br />   
-During the incubation phase, Sustify will roll out the pilot at Tarasima Apparels Ltd. (Partner Factory). <br />
-<div className="text-2xl font-bold mt-10"> 
-6. ToguMogu- Supporting female RMG workers through a health and wellbeing platform making their parenthood stress-free </div>
-ToguMogu is a one-stop parenting platform, aiming to provide health and wellbeing support to female garment workers from the stage of pregnancy to the first 5 years of their children’s lives. During the pilot phase, they intend to develop a primary healthcare support solution for female RMG workers through their app, develop a low-tech version of the platform for non-smartphone users, and appropriate contextualized contents for female RMG workers, while arranging workshops on physical health during pregnancy and child development to onboard the workers in the platform. The goal of the pilot is to ensure job retention after pregnancy and other health issues of female garment workers. <br />
-During the incubation phase, ToguMogu will roll out the pilot at Pioneer Knitwears (BD) Ltd. (Partner Factory). 
+              <div className="mx-auto mt-10">
 
 
+                <div className="min-w-full min-h-max flex space-x-3 my-5 border-2 border-[#de0083]">
+                <div className="w-1/12 hover:bg-[rgba(222,8,129,0.5)] bg-[rgba(222,8,129,1)] min-h-full cursor-pointer flex items-center" onClick={()=>{index==1? setIndex(6): setIndex(index-1)   }}>
+                  <BsChevronCompactLeft className="w-10 h-10 text-white"/>
+                  
+                </div> 
+                {content.map((item) => (
+                  (item.id === index)? (
+                      (item.id%2 ==1?  <div className="flex flex-col lg:flex-row space-x-4 items-center incubation_image duration-1000" key={item.id}>
+                      <img src={item.image} alt="" className="w-1/2" />
+                      <div>
+                        <span className="text-2xl font-bold mt-10 text-[#de0083]">{item.title} </span>
+                        <p className="text-md text-justify">{item.para}</p>
+                      </div>
+                    
+                  </div>: <div className="flex flex-col lg:flex-row space-x-4 items-center incubation_image duration-1000" key={item.id}>
+                      
+                      <div>
+                        <span className="text-2xl font-bold mt-10 text-[#de0083]">{item.title} </span>
+                        <p className="text-md text-justify">{item.para}</p>
+                      </div>
+                      <img src={item.image} alt="" className="w-1/2" />
+                  </div>)
 
-
-
-                {/* <div className="min-w-full"> 
-                  <span className="text-2xl font-bold mt-10">   1. Agroshift - Aiming to create a demand-driven digital grocery platform for RMG workers </span>
-                    <p>  Agroshift has designed a digital grocery ordering platform for RMG factory workers and employees providing primarily agro commodities like vegetables, fruits, rice, pulses, milk and meat, along with other daily needs. Workers can place digital orders through a mobile app or physically through ordering kiosks setup at designated places within the factories. Agroshift will fulfill orders by procuring directly from their farmer networks, taking care of the sorting, grading, packaging and delivery at factories, saving time for the female garment workers from doing daily groceries and improving the uptake of nutrition.
-                        During the incubation phase, Agroshift will roll out the pilot at Echotex Ltd. (Partner Factory). </p>
+                   ): "")
+                )}
+                <div className="w-1/12 hover:bg-[rgba(222,8,129,0.5)] bg-[rgb(222,8,129)]  min-h-full cursor-pointer flex items-center"  onClick={()=>{if(index==6){ setIndex(1)} else{setIndex(index+1)}   }}>
+                  <BsChevronCompactRight className="w-10 h-10 text-white" />
                 </div>
-                <br />
-                <div className="min-w-full"> 
-                  <span className=" text-2xl font-bold mt-10">   2. i-SMART- Developing a standardized skill matrix for women sewing workers </span> <p> 
-                    i-SMART team aims to introduce a standardized skill rating matrix for the assessment of the workers’ skills, reducing the chances of exploitation and underappreciation of talents in factories. Through training and equipment dry-run in the factory, they will deploy the rating process and remotely monitor the progress through telephone/VC/e-mail. The pilot aims to complete the rating of 1000 sewing workers showing 09 different generic skill rating scores during the pilot phase, collect the feedback of direct stakeholders (women sewing workers and supervisors and management), and meet other prospective garment manufacturers for wider adoption across the industry. During the incubation phase, i-Smart will roll out the pilot at Aswad Composite Mills Ltd. (Partner Factory).
-                    During the incubation phase, i-Smart will roll out the pilot at Aswad Composite Mills Ltd. (Partner Factory). </p>
                 </div>
-              <br />
-                <div className="min-w-full"> 
-                  <span className="text-2xl font-bold mt-10"> 3. Jyoti- Removing the barriers of access to sanitary pads for RMG factory workers improving menstrual hygiene </span>
-                  <p> 
-                    Jyoti team will install smart vending machines on factory floors where female employees can access and collect sanitary pads at an affordable price. The team’s initiative also includes awareness build-up and training on smart collection processes for the employees. The pilot aims to make sanitary pads affordable and easily accessible by women garment workers and build the habit of using menstrual hygiene products among the workers by making it accessible to them. 
-                    <br />
-                    During the incubation phase, Jyoti will roll out the pilot at Meghna Knit Composite Ltd. (Partner Factory).
-                    </p>
-                </div>
-              <br />
-                <div className="min-w-full"> 
-                  <span className="text-2xl font-bold mt-10"> 4.Quizrr- Building female RMG role models through skill and leadership development training </span>
-                    Quizrr aspires to equip women in the RMG sector with knowledge, skills and tools on dialogue-based problem solving, equality, leadership qualities and digital literacy, preparing them for new learnings and opportunities in the Bangladesh RMG sector of the future. Quizrr will make training available through an engaging worker-centric platform, on touchscreen tablets and smartphones - reaching employees in, or even before entering the RMG sector in Bangladesh. The tech-based training promotes collaborative skills and digital literacy along with infusing knowledge and confidence in the individual. 
-                    <br />
-                    During the incubation phase, Quizrr will roll out the pilot at Alliance Stitches Limited (Partner Factory).
-                </div>
-              <br />
-                <div className="min-w-full">
-                  <span className="text-2xl font-bold mt-10"> 5. Sustify- Building capacity through gamified microlearning for female factory workers in Bangladesh </span>
-                    Sustify is an interactive e-learning platform used on tablets that gamifies learning on work-related topics and increases digital skills. Sustify intends to offer a low-threshold and motivating entry into workplace learning for female garment workers with little learning experience through specially designed courses. Sustify will develop courses including subjects such as (female) worker rights, in the long run increasing retention. <br />   
-                    During the incubation phase, Sustify will roll out the pilot at Tarasima Apparels Ltd. (Partner Factory). 
-                </div>
-              <br />
-                <div className="min-w-full"> 
-                  <span className="text-2xl font-bold mt-10"> 
-                    6. ToguMogu- Supporting female RMG workers through a health and wellbeing platform making their parenthood stress-free </span>
-                    ToguMogu is a one-stop parenting platform, aiming to provide health and wellbeing support to female garment workers from the stage of pregnancy to the first 5 years of their children’s lives. During the pilot phase, they intend to develop a primary healthcare support solution for female RMG workers through their app, develop a low-tech version of the platform for non-smartphone users, and appropriate contextualized contents for female RMG workers, while arranging workshops on physical health during pregnancy and child development to onboard the workers in the platform. The goal of the pilot is to ensure job retention after pregnancy and other health issues of female garment workers. <br />
-                    During the incubation phase, ToguMogu will roll out the pilot at Pioneer Knitwears (BD) Ltd. (Partner Factory).
-                </div> */}
+
             
         </div>
       </div>
