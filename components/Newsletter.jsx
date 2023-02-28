@@ -3,10 +3,10 @@ import React from "react";
 const Newsletter = () => {
   return (
     <div className="newsletter -z-10 flex-col flex justify-center items-center">
-      <h1 className="text-white text-6xl font-bold pb-7 tracking-tighter">
+      <h1 className="text-white text-3xl md:text-6xl  font-bold pb-1 md:pb-7 tracking-tighter">
         Subscribe
       </h1>
-      <h2 className="text-white text-3xl pb-2 font-extralight">
+      <h2 className="text-white text-xl md:text-3xl pb-2 font-extralight">
         Stay informed - subscribe to our newsletter
       </h2>
       <input
