@@ -11,7 +11,7 @@ const Resources = () => {
       <hr className="h-2 bg-[#de0083]" />
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 my-10 xl:grid-cols-4 w-10/12 mx-auto">
         <Link href="https://innovation.brac.net/mobile-money/">
-        <div className="py-20 shadow-xl bg-[rgb(220,220,220)] cursor-pointer flex flex-col hover:text-white hover:underline justify-center items-center space-y-5 hover:bg-[#de0083]  rounded-lg text-[#de0083] border-2 border-[#de0083]">
+        <div className="py-20 shadow-xl bg-white cursor-pointer flex flex-col hover:text-white hover:underline justify-center items-center space-y-5 hover:bg-[#de0083]  rounded-lg text-[#de0083] border-2 border-[#de0083]">
             <div className="text-6xl ">
               <RiBookletFill />
             </div>
@@ -24,7 +24,7 @@ const Resources = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <div className="py-20  shadow-xl bg-[rgb(220,220,220)] cursor-pointer flex flex-col hover:text-white hover:underline justify-center items-center space-y-5 hover:bg-[#de0083]  rounded-lg text-[#de0083] border-2 border-[#de0083]">
+          <div className="py-20  shadow-xl bg-white cursor-pointer flex flex-col hover:text-white hover:underline justify-center items-center space-y-5 hover:bg-[#de0083]  rounded-lg text-[#de0083] border-2 border-[#de0083]">
             <div className="text-6xl ">
               <MdReportProblem />
             </div>
@@ -32,7 +32,7 @@ const Resources = () => {
           </div>
         </Link>
       <Link href="#">
-        <div className="py-20  shadow-xl bg-[rgb(220,220,220)] cursor-pointer flex flex-col hover:text-white hover:underline justify-center items-center space-y-5 hover:bg-[#de0083]  rounded-lg  text-[#de0083] border-2 border-[#de0083] ">
+        <div className="py-20  shadow-xl bg-white cursor-pointer flex flex-col hover:text-white hover:underline justify-center items-center space-y-5 hover:bg-[#de0083]  rounded-lg  text-[#de0083] border-2 border-[#de0083] ">
           <div className="text-6xl ">
             <FaToolbox />
           </div>
@@ -40,7 +40,7 @@ const Resources = () => {
         </div>
         </Link>
         <Link href="#">
-        <div className="py-20 shadow-xl bg-[rgb(220,220,220)] cursor-pointer flex flex-col hover:text-white hover:underline justify-center items-center space-y-5 hover:bg-[#de0083]  rounded-lg  text-[#de0083] border-2 border-[#de0083] ">
+        <div className="py-20 shadow-xl bg-white cursor-pointer flex flex-col hover:text-white hover:underline justify-center items-center space-y-5 hover:bg-[#de0083]  rounded-lg  text-[#de0083] border-2 border-[#de0083] ">
           <div className="text-6xl ">
             <FiTarget />
           </div>

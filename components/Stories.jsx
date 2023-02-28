@@ -92,7 +92,7 @@ const Stories = () => {
     <main id="blogs" className="bg-[rgb(245,245,245)]">
       <div className="h-auto pt-28 w-10/12 bg-white mx-auto pb-20 text-black">
         <div className="w-11/12 mx-auto">
-          <div className="flex items-center underline underline-offset-4 text-[#de0083] justify-between">
+          <div className="flex flex-col md:flex-row md:items-center underline underline-offset-4 text-[#de0083] justify-between">
             <h1
               className={
                 scroll

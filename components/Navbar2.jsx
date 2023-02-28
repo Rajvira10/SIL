@@ -58,15 +58,15 @@ const Navbar2 = () => {
               Partners
             </li>
           </Link>
-          <Link href="/#blogs">
+
             <li className="relative cursor-pointer text-white lg:text-base xl:text-xl">
               <div>Blog</div> 
               <div className="hidden absolute top-full left-1/2 transform -translate-x-1/2 duration-150">
-                <Link href="https://innovation.brac.net/blog/"><div className="bg-white p-4 shadow-md text-[#de0083]">Silverlining</div></Link> 
-                <Link href="https://medium.com/brac-social-innovation-lab"><div className="bg-white p-4 shadow-md mt-2 text-[#de0083]">Medium</div></Link>
+              <Link href="https://innovation.brac.net/blog/"><div className="bg-white mt-1 px-4 py-2 shadow-md text-[#de0083] text-sm">Silverlining</div></Link> 
+                <Link href="https://medium.com/brac-social-innovation-lab"><div className="bg-white px-4 py-2 shadow-md mt-1 text-[#de0083] text-sm">Medium</div></Link>
               </div>
             </li>
-          </Link>
+
           
           <Link href="/#contactus">
             <li className="cursor-pointer text-white lg:text-base xl:text-xl">
@@ -115,14 +115,14 @@ const Navbar2 = () => {
               {isblogOpen && (
                 <Link href="https://innovation.brac.net/blog/" scroll={false} onClick={toggleNav}>
                   <li className="relative cursor-pointer text-white text-2xl">
-                    <div>Silverlining</div>
+                    Silverlining
                   </li>
                 </Link>
               )}
               {isblogOpen && (
                 <Link href="https://medium.com/brac-social-innovation-lab" scroll={false} onClick={toggleNav}>
                   <li className="relative cursor-pointer text-white text-2xl">
-                    <div>Medium</div>
+                    Medium
                   </li>
                 </Link>
               )}              
