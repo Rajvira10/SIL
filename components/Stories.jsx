@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Thumbnail = ({ content, image, index }) => {
   return (
-    <div className="thumbnail flex-wrap">
+    <div className="thumbnail w-10/12 mx-auto">
       {content.map((item, i) => (
         <img
           key={i}
@@ -14,7 +14,7 @@ const Thumbnail = ({ content, image, index }) => {
           alt=""
           onMouseEnter={() => image(i)}
           onClick={() => image(i)}
-          className={index === i ? "active" : ""}
+          className={index === i ? "active rounded" : "rounded"}
         />
       ))}
     </div>
@@ -43,10 +43,10 @@ const Slideshow = ({ content }) => {
     }
   };
   return (
-    <div className="slideshow">
-      <div className="relative">
+    <div className="slideshow ">
+      <div className="relative ">
       <Link href={content[index].url}>
-        <div className="absolute z-10 bottom-[50px] pl-10 py-10  text-white w-full">
+        <div className="absolute z-10 rounded bottom-[50px] pl-10 py-10  text-white w-full">
           <div className="text-2xl font-bold underline underline-offset-2">
             {content[index].title}
           </div>
@@ -115,85 +115,6 @@ const Stories = () => {
             Read the latest stories, research and news from <br /> across the
             foundation
           </p>
-          {/* <div className="pt-20 flex">
-          <div className=" flex flex-col space-y-5 h-[650px] basis-7/12">
-            <div className="h-[500px] relative shadow-2xl">
-              <Image
-                src="/blog1.jpg"
-                className="object-cover object-center rounded"
-                layout="fill"
-                alt=""
-              />
-            </div>
-            <div>
-              <h2 className="text-xl mb-2 bottom cursor-pointer max-w-fit">
-                Digital wages and what it means for women
-              </h2>
-              <p className="text-slate-200 text-xs font-light">
-                February 19, 2020
-              </p>
-            </div>
-          </div>
-          {/* <div className="w-full overflow-x-scroll h-92">
-            <div className="flex">
-              <div className="h-[250px] relative basis-1/2">
-                <Image
-                  src="/blog3.jpg"
-                  className="object-cover object-center"
-                  layout="fill"
-                  alt=""
-                />
-              </div>
-              <div className="h-[250px] relative basis-1/2">
-                <Image
-                  src="/blog3.jpg"
-                  className="object-cover object-center"
-                  layout="fill"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div> */}
-          {/*<div className="basis-5/12 space-y-12 pl-24">
-            <div className=" flex flex-col space-y-5 h-[300px]">
-              <div className="h-[450px] relative">
-                <Image
-                  src="/blog3.jpg"
-                  className="object-cover object-center rounded"
-                  layout="fill"
-                  alt=""
-                />
-              </div>
-              <div>
-                <h2 className="text-xl mb-2 bottom cursor-pointer max-w-fit">
-                  Tackling a process innovation challenge 101
-                </h2>
-                <p className="text-slate-200 text-xs font-light">
-                  January 19, 2020
-                </p>
-              </div>
-            </div>
-            <div className=" flex flex-col space-y-5 h-[300px]">
-              <div className="h-[450px] relative">
-                <Image
-                  src="/blog2.jpg"
-                  className="object-cover object-center rounded"
-                  layout="fill"
-                  alt=""
-                />
-              </div>
-              <div>
-                <h2 className="text-xl mb-2 bottom cursor-pointer max-w-fit">
-                  End gender-based violence: Integrated approaches from around
-                  the world
-                </h2>
-                <p className="text-slate-200 text-xs font-light">
-                  December 5, 2019
-                </p>
-              </div>
-            </div>
-          </div>
-        </div> */}
           <div className="slideshowstories mt-10">
             {" "}
             <Slideshow
@@ -216,19 +137,6 @@ const Stories = () => {
                     "End gender-based violence: Integrated approaches from around the world",
                   img: "/blog3.jpg",
                   url: "https://blog.brac.net/end-gender-based-violence-integrated-approaches-from-around-the-world/",
-                },
-                {
-                  date: "November 26, 2019",
-                  title: "Digital cash: The future of humanitarian response?",
-                  img: "/blog4.jpg",
-                  url: "https://blog.brac.net/digital-cash-the-future-of-humanitarian-response/",
-                },
-                {
-                  date: "October 23, 2019",
-                  title:
-                    "Taking on tech: 3 stages that every NGO needs to know",
-                  img: "/blog5.jpg",
-                  url: "https://blog.brac.net/taking-on-tech-3-stages-that-every-ngo-needs-to-know/",
                 },
               ]}
             />

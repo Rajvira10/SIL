@@ -4,7 +4,7 @@ const Partners = () => {
   const [scroll, setScroll] = useState(false);
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      setScroll(window.scrollY > 5700);
+      setScroll(window.scrollY > 5000);
     });
   }, []);
 

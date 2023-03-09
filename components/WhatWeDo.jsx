@@ -6,14 +6,16 @@ const items = [{
   id:1,
   title: "Crowdsourcing Innovation",
   title: "Crowdsourcing Innovation",
+  image: "/Crowdsourcing Innovation.JPG",
   link: "/crowdsourcing",
   para: "Incubating, adapting and mainstreaming innovations.",
-  back: "The Frugal Innovation Forum is the biggest international conference of BRAC where we explore what has worked and what hasn’t, what to improve and what needs to be done, and where to go from here (and who to partner with). This helps the broader development sector audience to address critical discussions and work toward closing the remaining gaps in a sustainable, cost-effective way."    
+  back: "The Frugal Innovation Forum is the biggest international conference of BRAC where we explore what has worked and what hasn’t, what to improve and what needs to be done, and where to go from here (and who to partner with). This helps the broader development sector audience to address critical discussions and work toward closing the remaining gaps in a sustainable way."    
 },
 {
   id: 2,
   title: "Programme Collaboration",
   link: "/collaboration",
+  image:"/Programme Collaboration.jpg",
   para: "Creating space for knowledge and partnerships.",
   back: "In the context of Bangladesh, the rapid adoption of mobile money has created exciting opportunities to accelerate financial inclusion for people living in poverty, and particularly women."        
 },
@@ -21,6 +23,7 @@ const items = [{
   id: 3,
   title: "Design and Behavioural Insights",
   link: "/design",
+  image: "/Design & Behaviour.jpeg",
   para: "Generating quick insights to foster impact driven innovation.",
   back: "In May 2020, BRAC was awarded a $4 million grant from the DFID-Unilever  Hygiene and Behaviour Change Coalition (HBCC), to implement activities on the ground aimed at systematically change the hygiene practices of community members in response to the global COVID-19 pandemic. For this year-long project, we are partnering alongside BRAC"        
 },
@@ -28,8 +31,17 @@ const items = [{
   id: 4,
   title: "Moonshots",
   link: "/moonshots",
+  image: "/hero.jpg",
   para: "Redesigning models and services putting people first.",
   back: "An inclusive youth platform to develop active, enlightened, skillful and empathetic citizens for tomorrow, through a comprehensive package of 21st century skills training and community service projects. The platform also includes access to a larger network of partners and like-minded youth groups for future opportunities."        
+},
+{
+  id: 5,
+  title:"Incubation",
+  link: "/incubation", 
+  image: "/Incubation.jpg",
+  para: "Redesigning models and services putting people first.",
+  back: "Launched in October 2021, the STITCH for RMG: Global Innovation Challenge has finally come to an end after three-month-long rigorous competition to crowdsource innovations that can safeguard the livelihood of Bangladeshi women garment workers of the RMG industry. BRAC, H&M Foundation, and The Asia Foundation announced the six winners last Tuesday, 7 February 2022"
 }  
 ]
 
@@ -63,41 +75,10 @@ const WhatWeDo = () => {
         </h1>
       </span>
       <div className="flex w-10/12 mx-auto pt-16 pb-3  space-x-12 overflow-x-scroll overflow-y-hidden whatwedo-scroll">
-        <Card
-          title="Crowdsourcing Innovation"
-          link="/crowdsourcing-innovation"
-          image= "/Crowdsourcing Innovation.JPG"
-          para="Incubating, adapting and mainstreaming innovations."
-          back="The Frugal Innovation is the biggest international conference of BRAC where we explore what has worked and what hasn’t, what to improve and what needs to be done, and where to go from here (and who to partner with). This helps the broader development sector audience to address critical discussions and work toward closing the remaining gaps in a sustainable, cost-effective way."
-        />
-        <Card
-          title="Programme Collaboration"
-          link="/program-collaboration"
-          image="/Programme Collaboration.jpg"
-          para="Creating space for knowledge and partnerships."
-          back="In the context of Bangladesh, the rapid adoption of mobile money has created exciting opportunities to accelerate financial inclusion for people living in poverty, and particularly women."
-        />
-        <Card
-          title="Design and Behavioural Insights"
-          link="/design-and-behavioral-insights"
-          image="/Design & Behaviour.jpeg"
-          para="Generating quick insights to foster impact driven innovation."
-          back="In May 2020, BRAC was awarded a $4 million grant from the DFID-Unilever  Hygiene and Behaviour Change Coalition (HBCC), to implement activities on the ground aimed at systematically change the hygiene practices of community members in response to the global COVID-19 pandemic. For this year-long project, we are partnering alongside BRAC"
-        />
-        <Card
-          title="Moonshots"
-          link="/moonshots"
-          image="/hero.jpg"
-          para="Redesigning models and services putting people first."
-          back="An inclusive youth platform to develop active, enlightened, skillful and empathetic citizens for tomorrow, through a comprehensive package of 21st century skills training and community service projects. The platform also includes access to a larger network of partners and like-minded youth groups for future opportunities."
-        />
-                <Card
-          title="Incubation"
-          link="/incubation"
-          image = "/Incubation.jpg"
-          para="Redesigning models and services putting people first."
-          back="Launched in October 2021, the STITCH for RMG: Global Innovation Challenge has finally come to an end after three-month-long rigorous competition to crowdsource innovations that can safeguard the livelihood of Bangladeshi women garment workers of the RMG industry. BRAC, H&M Foundation, and The Asia Foundation announced the six winners last Tuesday, 7 February 2022"
-          />
+        {items.map(item => (
+          <Card key={item.id} title={item.title} link={item.link} image={item.image} para={item.para} back={item.back} />
+        ))}
+       
       </div>
         {/* <motion.div
           ref={carousel}

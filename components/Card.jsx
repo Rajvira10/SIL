@@ -11,11 +11,11 @@ const Card = ({ title, para, image, back, link }) => {
         <div className="front bg-white flex-col card cursor-pointer ">
           <img src={image} className="card__image" alt="" />
           <div className="h-[225px] w-[270px] text-center pt-8 px-6">
-            <h1 className="text-lg font-bold pb-3">{title}</h1>
-            <p className="pt-4">{para}</p>
+            <h1 className="text-xl font-bold pb-3">{title}</h1>
+            <p className="pt-4 text-lg">{para}</p>
           </div>
         </div>
-        <div className="back text-justify flex justify-center items-center">
+        <div className="back text-justify flex justify-center items-center text-lg">
           {back}
         </div>
       </div>

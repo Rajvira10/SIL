@@ -3,8 +3,8 @@ import React from "react";
 
 const Quote = () => {
   return (
-    <div className="bg-[rgb(245,245,245)]  py-20 md:py-28 my-20">
-      <article className="w-11/12 md:w-9/12 lg:w-8/12 xl:w-7/12  mx-auto text-2xl leading-normal">
+    <div className="bg-[rgb(245,245,245)]  py-20 my-10">
+      <article className="w-11/12 md:w-9/12 lg:w-8/12 xl:w-7/12  mx-auto text-xl leading-normal">
         A world{" "}
         <span className="title5 font-bold underline decoration-[#de0083] underline-offset-8 hover:bg-[#de0083] duration-1000">
           free from all forms of exploitation and discrimination{" "}
@@ -23,7 +23,7 @@ const Quote = () => {
         to serve the people we work for.
         <Link href="https://www.brac.net/partnership#partners">
           <div className="text-black flex items-center pt-8  partner">
-            <div className="text-[24px] md:text-[28px] font-bold hover:text-[#de0083] duration-300 underline underline-offset-4">
+            <div className="text-xl md:text-[28px] font-bold hover:text-[#de0083] duration-300 underline underline-offset-4">
               Partner With Us
             </div>
             <svg
