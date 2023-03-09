@@ -18,7 +18,7 @@ const Enterprise = () => {
             Social enterprises offer an intersection of business and traditional non-profit. By design, BRAC social enterprises are self-sustaining cause-driven business entities that create social impact by offering solutions to social challenges. 
 
             We believe that our approach to innovation has the power to bring improvements to enterprise products, services and customer experience. That in turn - helps these enterprises to become more effective and efficient in solving social challenges - leading to more revenues and surplus. Our theory-of-change suggests that they can be reinvested again to sustain and generate greater social impact. 
- </p>
+            </p>
 
 
             

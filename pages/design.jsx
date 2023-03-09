@@ -42,7 +42,7 @@ const Design = () => {
             <div>
            <p> Behaviour insights have long informed our work for our clients. We have launched behavioural trials in the past to know about behaviour patterns, perceptions and barriers. This has helped us to hone our programme design capacity and influencing policies at the same time.</p>
           <p>As we pride ourselves on being relevant to the people we serve, we have invested in user experience and service design. We go into the field, test with our users and quickly iterate to smoothen their journey. Our service design has helped us identify key interaction points of the services provided to our clients and evaluate their feasibility and convenience rapidly.
-</p>
+          </p>
 
             </div>
 

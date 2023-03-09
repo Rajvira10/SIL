@@ -15,7 +15,7 @@ const Crowdsourcing = () => {
           <img src="/fif.jpg" height="200" alt="" />
 
           <div className=" w-9/12 mx-auto">
-            <h2 className="text-5xl font-bold title4 max-w-max hover:bg-[#de0083] hover:text-white mb-5">
+            <h2 className="text-5xl font-bold  max-w-max text-[#de0083] mb-5">
               Frugal Innovation Forum
             </h2>
 
@@ -50,7 +50,7 @@ const Crowdsourcing = () => {
           <img src="/bracx 2.jpg" height="200" alt="" />
 
           <div className=" w-9/12 mx-auto">
-            <h2 className="text-5xl font-bold title4 max-w-max hover:bg-[#de0083] hover:text-white mb-5">
+            <h2 className="text-5xl font-bold max-w-max text-[#de0083] mb-5">
               bracX
             </h2>
 

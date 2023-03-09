@@ -10,7 +10,6 @@ import { motion, useScroll, useSpring } from "framer-motion";
 import Footer from "../components/Footer";
 import Quote from "../components/Quote";
 import Link from "next/link";
-import Newsletter from "../components/Newsletter";
 import Gallery from "../components/Gallery";
 import { useState } from 'react';
 
@@ -78,7 +77,7 @@ export default function Home() {
         <div className="invisible lg:visible absolute text-xl bottom-1/2 right-0 bg-[#de0083] text-white pl-7 pr-5 py-3 hover:scale-105 duration-300 font-bold rounded-l-full cursor-pointer" onMouseEnter={()=> setTrending(true)} onClick={()=> setTrending(!trending)}>
           Now Trending
         </div>
-        <div className={`invisible lg:visible absolute flex flex-col text-lg duration-500 space-y-5 mt-20 ${trending ? "left-0" : "-left-[1000px]"}`}>
+        <div className={`invisible lg:visible absolute flex flex-col text-lg duration-500 space-y-5 mt-[10%] ${trending ? "left-0" : "-left-[1000px]"}`}>
           <Link href="https://innovation.brac.net/fif2022" className="bg-[#de0083] text-white pl-5 pr-5 py-3 hover:scale-105 duration-300 font-bold rounded-r-full cursor-pointer">
           Frugal Innovation Forum 2022
           </Link>
@@ -114,7 +113,6 @@ export default function Home() {
       <Events />
       <Partners />
       <Gallery/>
-      <Newsletter/>
       <Footer />
       <div className="bg-[#313131] flex text-white justify-center items-center h-[50px]">
         © 2022 BRAC. All Rights Reserved.
